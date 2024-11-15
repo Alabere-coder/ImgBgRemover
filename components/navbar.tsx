@@ -29,7 +29,7 @@ const Navbar = () => {
             alt="File icon"
             width={30}
             height={30}
-            className="mr-4"
+            className=""
           />
         </SheetTrigger>
         <SheetContent className="bg-white w-2/3">

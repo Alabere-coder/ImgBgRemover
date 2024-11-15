@@ -14,15 +14,15 @@ const UploadImage = () => {
   };
 
   return (
-    <div className="flex items-center max-md:flex-col gap-10">
-      <div className="w-[30rem] max-md:w-[25rem]">
-        <p className="text-5xl leading-normal max-md:text-[43px]">
+    <div className="flex items-center max-md:flex-col w-full gap-6 px-6">
+      <div className="w-10/12">
+        <p className="text-7xl max-md:text-[43px] max-md:mt-6 mb-10">
           Remove Image
-          <span className="bg-slate-800 rounded-2xl px-3 mx-2 font-semibold text-white">
-            Background
-          </span>
         </p>
-        <div className="flex items-center gap-4">
+        <p className="inline bg-slate-800 rounded-2xl p-2  text-5xl font-semibold text-white">
+          Background
+        </p>
+        <div className="flex items-center gap-4 mt-6">
           <Image
             src="/magic-wand-icon.webp"
             alt="magic-wand"
@@ -32,8 +32,8 @@ const UploadImage = () => {
           <p className="text-xl">With just a click.</p>
         </div>
       </div>
-      <Card className=" shadow-md">
-        <div className="h-[25rem] rounded-2xl bg-white w-[25rem] flex justify-center items-center">
+      <Card className="w-11/12 shadow-md">
+        <div className="h-[25rem] rounded-2xl bg-white w- flex justify-center items-center">
           <ImageSelector
             apiKey={API_KEY}
             apiUrl={API_URL}

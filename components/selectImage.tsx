@@ -216,7 +216,7 @@ const ImageSelector: React.FC<ImageSelectorProps> = ({
               )}
             </div>
 
-            <div className="flex items-center max-md:flex-row justify-between mt-10">
+            <div className="w-full flex items-center justify-between mt-10">
               <div className="flex items-center gap-3">
                 {processedImage && (
                   <>
@@ -233,11 +233,11 @@ const ImageSelector: React.FC<ImageSelectorProps> = ({
                 )}
               </div>
 
-              <div className=" flex items-center gap-2">
+              <div className="flex gap-2 place-content-end">
                 <Button
                   onClick={() => setIsPopupOpen(false)}
                   variant="outline"
-                  className="rounded-[8px]"
+                  className="rounded-[8px] max-sm:hidden"
                 >
                   Close
                 </Button>
