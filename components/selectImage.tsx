@@ -180,10 +180,10 @@ const ImageSelector: React.FC<ImageSelectorProps> = ({
               <X className="w-5 h-5" />
             </Button>
 
-            <div className="flex flex-row max-md:flex-col max-h-screen gap-6">
+            <div className="flex flex-row max-sm:px-4 max-md:flex-col max-h-screen gap-6">
               {image && (
                 <div className="space-y-2 w-[50%] max-md:w-full">
-                  <h3 className="text-sm font-medium text-gray-700">
+                  <h3 className="text-sm font-semibold text-gray-700">
                     Original Image
                   </h3>
                   <Card className="max-w-[100%]">
@@ -200,16 +200,16 @@ const ImageSelector: React.FC<ImageSelectorProps> = ({
 
               {processedImage && (
                 <div className="space-y-2 max-md:w-full w-[50%]">
-                  <h3 className="text-sm font-medium text-green-600">
+                  <h3 className="text-sm font-semibold text-green-600">
                     Processed Image
                   </h3>
                   <Card className="max-w-[100%]" style={{ backgroundColor }}>
                     <Image
                       src={processedImage}
                       alt="Processed"
-                      width={100}
+                      width={200}
                       height={100}
-                      className="w-fit max-sm:h-[14rem] rounded-[8px]"
+                      className="w-screen max-sm:h-[14rem] rounded-[8px]"
                     />
                   </Card>
                 </div>
