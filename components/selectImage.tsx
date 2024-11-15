@@ -97,7 +97,11 @@ const ImageSelector: React.FC<ImageSelectorProps> = ({
       });
 
       if (!res.ok) {
-        throw new Error(`HTTP error! status: ${res.status}`);
+        // Try to extract a meaningful error message from the response
+        const errorData = await res.json();
+        throw new Error(
+          errorData.message || `HTTP error! status: ${res.status}`
+        );
       }
 
       const data = await res.blob();
@@ -212,28 +216,28 @@ const ImageSelector: React.FC<ImageSelectorProps> = ({
               )}
             </div>
 
-            <div className="flex items-center justify-between mt-10">
+            <div className="flex items-center max-md:flex-row justify-between mt-10">
               <div className="flex items-center gap-3">
                 {processedImage && (
                   <>
                     <label className="text-sm font-medium text-gray-700">
-                      Background:
+                      Add-Bg:
                     </label>
                     <Input
                       type="color"
                       value={backgroundColor}
                       onChange={(e) => setBackgroundColor(e.target.value)}
-                      className="w-10 h-10 p-1 rounded-md"
+                      className="w-8 h-8 p-1 rounded-md"
                     />
                   </>
                 )}
               </div>
 
-              <div className="absolute right-4 flex items-center gap-3">
+              <div className=" flex items-center gap-2">
                 <Button
                   onClick={() => setIsPopupOpen(false)}
                   variant="outline"
-                  className="rounded-lg"
+                  className="rounded-[8px]"
                 >
                   Close
                 </Button>
@@ -241,7 +245,7 @@ const ImageSelector: React.FC<ImageSelectorProps> = ({
                 {processedImage ? (
                   <Button
                     onClick={handleDownload}
-                    className="rounded-lg bg-blue-600 hover:bg-blue-700"
+                    className="rounded-[8px] text-white bg-blue-600 hover:bg-blue-700"
                   >
                     <Download className="w-4 h-4 mr-2" />
                     Download
@@ -250,7 +254,7 @@ const ImageSelector: React.FC<ImageSelectorProps> = ({
                   <Button
                     onClick={handleRemoveBackground}
                     disabled={isLoading || !image}
-                    className="rounded-lg bg-blue-600 hover:bg-blue-700"
+                    className="rounded-[8px] bg-blue-600 hover:bg-blue-700"
                   >
                     {isLoading ? (
                       <>
