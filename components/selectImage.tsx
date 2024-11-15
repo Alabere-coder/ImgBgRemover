@@ -171,7 +171,7 @@ const ImageSelector: React.FC<ImageSelectorProps> = ({
 
       {isPopupOpen && (
         <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50">
-          <div className="relative flex flex-wrap w-11/12 max-w-4xl max-md:w-[90%] max-md:h-fit p-6 bg-white rounded-xl shadow-xl">
+          <div className="relative flex flex-wrap w-11/12 max-w-4xl md:h-[70%] max-sm:w-[90%] max-md:w-[60%] max-md:h-[90%] p-6  bg-white rounded-xl shadow-xl">
             <Button
               variant="ghost"
               className="absolute top-4 right-4 p-2 hover:bg-gray-100 rounded-full"
@@ -180,7 +180,7 @@ const ImageSelector: React.FC<ImageSelectorProps> = ({
               <X className="w-5 h-5" />
             </Button>
 
-            <div className="flex flex-row max-sm:px-4 max-md:flex-col max-h-screen gap-6">
+            <div className="flex flex-row max-sm:px-8 max-md:flex-col max-h-screen max-md:px-10 gap-6">
               {image && (
                 <div className="space-y-2 w-[50%] max-md:w-full">
                   <h3 className="text-sm font-semibold text-gray-700">
@@ -192,7 +192,7 @@ const ImageSelector: React.FC<ImageSelectorProps> = ({
                       alt="Original"
                       width={200}
                       height={100}
-                      className="w-screen max-sm:h-[14rem] rounded-[8px] "
+                      className="w-screen h-[23rem] ma max-md:h-[14rem] rounded-[8px] "
                     />
                   </Card>
                 </div>
@@ -209,7 +209,7 @@ const ImageSelector: React.FC<ImageSelectorProps> = ({
                       alt="Processed"
                       width={200}
                       height={100}
-                      className="w-screen max-sm:h-[14rem] rounded-[8px]"
+                      className="w-screen h-[23rem] max-md:h-[14rem] rounded-[8px]"
                     />
                   </Card>
                 </div>
