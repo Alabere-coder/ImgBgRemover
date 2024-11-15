@@ -171,7 +171,7 @@ const ImageSelector: React.FC<ImageSelectorProps> = ({
 
       {isPopupOpen && (
         <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50">
-          <div className="relative flex flex-wrap w-11/12 max-w-4xl max-md:w-[70%] max-md:h-fit p-6 bg-white rounded-xl shadow-xl">
+          <div className="relative flex flex-wrap w-11/12 max-w-4xl max-md:w-[90%] max-md:h-fit p-6 bg-white rounded-xl shadow-xl">
             <Button
               variant="ghost"
               className="absolute top-4 right-4 p-2 hover:bg-gray-100 rounded-full"
@@ -192,7 +192,7 @@ const ImageSelector: React.FC<ImageSelectorProps> = ({
                       alt="Original"
                       width={200}
                       height={100}
-                      className="w-fit max-sm:h-[14rem] rounded-[8px] "
+                      className="w-screen max-sm:h-[14rem] rounded-[8px] "
                     />
                   </Card>
                 </div>
@@ -254,7 +254,7 @@ const ImageSelector: React.FC<ImageSelectorProps> = ({
                   <Button
                     onClick={handleRemoveBackground}
                     disabled={isLoading || !image}
-                    className="rounded-[8px] bg-blue-600 hover:bg-blue-700"
+                    className="rounded-[8px] text-white bg-blue-600 hover:bg-blue-700"
                   >
                     {isLoading ? (
                       <>
@@ -262,7 +262,7 @@ const ImageSelector: React.FC<ImageSelectorProps> = ({
                         Processing...
                       </>
                     ) : (
-                      "Remove Background"
+                      "Remove BG"
                     )}
                   </Button>
                 )}
