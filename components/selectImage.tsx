@@ -28,7 +28,7 @@ const ImageSelector: React.FC<ImageSelectorProps> = ({
   const handleImageChange = (file: File) => {
     setError(null);
 
-    if (file.size > 8 * 1024 * 1024) {
+    if (file.size > 5 * 1024 * 1024) {
       setError("File size must be less than 8MB");
       return;
     }
@@ -171,7 +171,7 @@ const ImageSelector: React.FC<ImageSelectorProps> = ({
 
       {isPopupOpen && (
         <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50">
-          <div className="relative flex flex-wrap w-11/12 max-w-4xl md:h-[70%] max-sm:w-[90%] max-md:w-[60%] max-md:h-[90%] p-6  bg-white rounded-xl shadow-xl">
+          <div className="relative flex flex-wrap w-11/12 max-w-4xl md:h-[70%] max-sm:w-[80%] max-md:w-[60%] max-md:h-[95%] p-6  bg-white rounded-xl shadow-xl">
             <Button
               variant="ghost"
               className="absolute top-4 right-4 p-2 hover:bg-gray-100 rounded-full"
@@ -192,7 +192,7 @@ const ImageSelector: React.FC<ImageSelectorProps> = ({
                       alt="Original"
                       width={200}
                       height={100}
-                      className="w-screen h-[23rem] ma max-md:h-[14rem] rounded-[8px] "
+                      className="w-screen h-[23rem] ma max-md:h-[15rem] max-sm:h-[14rem] rounded-[8px] "
                     />
                   </Card>
                 </div>
@@ -209,14 +209,14 @@ const ImageSelector: React.FC<ImageSelectorProps> = ({
                       alt="Processed"
                       width={200}
                       height={100}
-                      className="w-screen h-[23rem] max-md:h-[14rem] rounded-[8px]"
+                      className="w-screen h-[23rem] max-md:h-[16rem] rounded-[8px]"
                     />
                   </Card>
                 </div>
               )}
             </div>
 
-            <div className="w-full flex items-center justify-between mt-10">
+            <div className="w-full flex items-center justify-between mt-6">
               <div className="flex items-center gap-3">
                 {processedImage && (
                   <>
