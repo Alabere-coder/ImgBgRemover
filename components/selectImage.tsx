@@ -209,7 +209,7 @@ const ImageSelector: React.FC<ImageSelectorProps> = ({
                       alt="Processed"
                       width={200}
                       height={100}
-                      className="w-screen h-[23rem] max-md:h-[16rem] rounded-[8px]"
+                      className="w-screen h-[23rem] max-md:h-[15rem] rounded-[8px]"
                     />
                   </Card>
                 </div>
